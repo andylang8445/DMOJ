@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
         for(int j=1;(i-j)>=0&&(i+j)<length;j++){
             if(arr[i-j]==arr[i+j]){
                 tmp+=2;
-                if(max<tmp){ㅌ   
+                if(max<tmp){
                     max=tmp;
                 }
                 //printf("\n\ti: %d, j: %d, tmp: %d\n",i,j,tmp);
