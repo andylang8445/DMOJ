@@ -1,14 +1,16 @@
-//
-//  main.cpp
-//  CCC '21 S3
-//
-//  Created by Hongjun Yun on 2021-12-19.
-//
+    //
+    //  main.cpp
+    //  CCC '21 S3
+    //
+    //  Created by Hongjun Yun on 2021-12-19.
+    //
 
-#include <iostream>
+    #include <iostream>
+    #include <cmath>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
-}
+    using namespace std;
+
+    int main(int argc, const char * argv[]) {
+        
+        return 0;
+    }
