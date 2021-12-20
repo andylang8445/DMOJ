@@ -40,26 +40,24 @@ int main(int argc, const char * argv[]) {
             min=P[i];
     }
     int mid{0};
-    long s{0};
+    //cout<<"\tmax: "<<max<<", min: "<<min<<endl;
+    long speakerLoc{0};
     while(min<=max){
         mid=(min+max)/2;
-        s=walkingTime(mid);
-        long sL{walkingTime(mid-1)};
-        long sR{walkingTime(mid+1)};
+        long speakerLocL{walkingTime(mid-1)};
+        long speakerLocR{walkingTime(mid+1)};
+        speakerLoc=walkingTime(mid);
         //cout<<"\tmax: "<<max<<", min: "<<min<<", mid: "<<mid<<", s: "<<s<<", sL: "<<sL<<", sR: "<<sR<<endl;
-        if(s<sR&&s<sL){
+        if((speakerLoc<speakerLocR&&speakerLoc<speakerLocL)||(speakerLoc==speakerLocR||speakerLoc==speakerLocL)){
             break;
         }
-        else if(s==sR||s==sL){
-            break;
-        }
-        else if(s<sR){
+        else if(speakerLoc<speakerLocR){
             max=mid-1;
         }
         else{
             min=mid+1;
         }
     }
-    cout<<s;
+    cout<<speakerLoc;
     return 0;
 }
